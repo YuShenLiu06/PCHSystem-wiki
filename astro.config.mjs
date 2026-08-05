@@ -1,12 +1,16 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://yushenliu06.github.io',
   base: '/PCHSystem-wiki',
   integrations: [
+    mermaid({
+      test: (node) => node.lang === 'mermaid',
+    }),
     starlight({
       title: 'PCHSystem',
       description: 'HTCMC 项目贡献与荣誉系统 · 新手入门指南',
