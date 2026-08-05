@@ -1,1 +1,161 @@
-/* PCHSystem Wiki 自定义样式 */
+/* ============================================================
+   PCHSystem Wiki · 像素矿井主题令牌
+   深板岩底色 + 草方块绿 accent;Minecraft 工艺语汇
+   ============================================================ */
+
+/* ---------- Dark(默认) ---------- */
+:root {
+  /* 绿色 accent 阶 */
+  --sl-color-accent-low: #173322;
+  --sl-color-accent: #4ade80;
+  --sl-color-accent-high: #b9f4cf;
+
+  /* 深板岩灰阶 */
+  --sl-color-white: #f1f5f9;
+  --sl-color-gray-1: #cbd5e1;
+  --sl-color-gray-2: #94a3b8;
+  --sl-color-gray-3: #64748b;
+  --sl-color-gray-4: #3f4c63;
+  --sl-color-gray-5: #273449;
+  --sl-color-gray-6: #131c2e;
+  --sl-color-gray-7: #0e1626;
+
+  --sl-color-bg: #0b1220;
+  --sl-color-bg-nav: #0e1626;
+  --sl-color-bg-sidebar: #0e1626;
+  --sl-color-hairline: #1f2d44;
+  --sl-color-hairline-light: #273449;
+
+  --sl-color-text: #cbd5e1;
+  --sl-color-text-accent: #4ade80;
+  --sl-color-text-invert: #08111d;
+
+  /* 代码与边框微调 */
+  --sl-color-bg-inline-code: #131c2e;
+  --sl-border: 1px solid var(--sl-color-hairline);
+}
+
+/* ---------- Light ---------- */
+:root[data-theme='light'] {
+  /* 浅模式用更深的祖母绿保证对比度 */
+  --sl-color-accent-low: #d5f3e0;
+  --sl-color-accent: #15803d;
+  --sl-color-accent-high: #14532d;
+
+  --sl-color-white: #0f172a;
+  --sl-color-gray-1: #1e293b;
+  --sl-color-gray-2: #475569;
+  --sl-color-gray-3: #64748b;
+  --sl-color-gray-4: #94a3b8;
+  --sl-color-gray-5: #e2e8f0;
+  --sl-color-gray-6: #f1f5f9;
+  --sl-color-gray-7: #f8fafc;
+
+  --sl-color-bg: #fbfcfe;
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #f8fafc;
+  --sl-color-hairline: #e2e8f0;
+  --sl-color-hairline-light: #eceff4;
+
+  --sl-color-text: #334155;
+  --sl-color-text-accent: #15803d;
+  --sl-color-text-invert: #f8fafc;
+
+  --sl-color-bg-inline-code: #eef2f7;
+}
+
+/* ---------- 全局微调 ---------- */
+
+/* 链接 hover 平滑 */
+.sl-markdown-content a {
+  text-underline-offset: 0.2em;
+  transition: color 150ms ease;
+}
+
+/* Starlight 卡片:细线框 + hover 微浮 */
+.sl-card,
+.card {
+  border: 1px solid var(--sl-color-hairline) !important;
+  background-color: var(--sl-color-gray-7) !important;
+  border-radius: 14px !important;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.sl-card:hover,
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--sl-color-accent) !important;
+  box-shadow: 0 10px 30px -14px rgba(74, 222, 128, 0.22);
+}
+
+:root[data-theme='light'] .sl-card:hover,
+:root[data-theme='light'] .card:hover {
+  box-shadow: 0 10px 30px -14px rgba(21, 128, 61, 0.2);
+}
+
+/* 卡片内图标与标题节奏 */
+.sl-card .icon {
+  color: var(--sl-color-accent);
+}
+
+/* 焦点可见性(a11y 地板) */
+:focus-visible {
+  outline: 2px solid var(--sl-color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   首页(splash)专属 — 像素矿井首屏
+   ============================================================ */
+
+/* 首屏 pixel-grid 纸纹 + 顶部绿色微光 */
+body[data-has-hero] .content-panel:first-of-type {
+  background-image:
+    radial-gradient(900px 420px at 50% -8%, rgba(74, 222, 128, 0.1), transparent 65%),
+    radial-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    26px 26px;
+  background-position:
+    center top,
+    center 8px;
+}
+
+:root[data-theme='light'] body[data-has-hero] .content-panel:first-of-type {
+  background-image:
+    radial-gradient(900px 420px at 50% -8%, rgba(21, 128, 61, 0.08), transparent 65%),
+    radial-gradient(rgba(100, 116, 139, 0.12) 1px, transparent 1px);
+}
+
+/* hero 标题:字距收紧 + 绿色方块光标 */
+body[data-has-hero] h1 {
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+body[data-has-hero] h1::after {
+  content: '';
+  display: inline-block;
+  width: 0.22em;
+  height: 0.22em;
+  margin-left: 0.12em;
+  background: var(--sl-color-accent);
+}
+
+/* splash 隐藏翻页 footer 噪声 */
+body[data-has-hero] .pagination-links {
+  display: none;
+}
+
+/* 减少动效偏好尊重 */
+@media (prefers-reduced-motion: reduce) {
+  .sl-card,
+  .card,
+  .sl-markdown-content a {
+    transition: none;
+  }
+}

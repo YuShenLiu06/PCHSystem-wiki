@@ -1,0 +1,112 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+import type { StarlightIcon } from '@astrojs/starlight/components/Icon.astro';
+
+interface Props {
+	icon?: StarlightIcon;
+	title: string;
+	href?: string;
+	description?: string;
+}
+
+const { icon, title, href, description } = Astro.props;
+---
+
+{
+	href ? (
+		<div class="sl-link-card">
+			<span class="sl-flex stack">
+				<a href={href}>
+					<span class="title sl-flex">
+						{icon && <Icon name={icon} class="icon" size="1.333em" />}
+						<span set:html={title} />
+					</span>
+				</a>
+				{description && <span class="description" set:html={description} />}
+				<div class="body"><slot /></div>
+			</span>
+			<Icon name="right-arrow" size="1.333em" class="icon arrow rtl:flip" />
+		</div>
+	) : (
+		<article class="sl-link-card">
+			<span class="sl-flex stack">
+				<span class="title sl-flex">
+					{icon && <Icon name={icon} class="icon" size="1.333em" />}
+					<span set:html={title} />
+				</span>
+				{description && <span class="description" set:html={description} />}
+				<div class="body"><slot /></div>
+			</span>
+		</article>
+	)
+}
+
+<style>
+	@layer starlight.components {
+		.sl-link-card {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: 0.5rem;
+			border: 1px solid var(--sl-color-gray-5);
+			border-radius: 0.5rem;
+			padding: 1rem;
+			box-shadow: var(--sl-shadow-sm);
+			position: relative;
+		}
+
+		a {
+			text-decoration: none;
+			line-height: var(--sl-line-height-headings);
+		}
+
+		/* a11y fix for https://github.com/withastro/starlight/issues/487 */
+		a::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+		}
+
+		.stack {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+
+		.title {
+			color: var(--sl-color-white);
+			font-weight: 600;
+			font-size: var(--sl-text-lg);
+			gap: 0.5rem;
+			align-items: center;
+		}
+
+		.description {
+			color: var(--sl-color-gray-3);
+			line-height: 1.5;
+		}
+
+		.body {
+			margin: 0;
+			color: var(--sl-color-gray-2);
+			font-size: var(--sl-text-sm);
+			line-height: 1.6;
+		}
+
+		.body p {
+			margin: 0;
+		}
+
+		.arrow {
+			color: var(--sl-color-gray-3);
+		}
+
+		/* Hover state */
+		.sl-link-card:hover {
+			background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+			border-color: var(--sl-color-gray-2);
+		}
+
+		.sl-link-card:hover .arrow {
+			color: var(--sl-color-white);
+		}
+	}
+</style>

@@ -24,6 +24,11 @@ export default defineConfig({
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/YuShenLiu06/PCHSystem' },
       ],
+      logo: {
+        light: './src/assets/logo.svg',
+        dark: './src/assets/logo-dark.svg',
+        replacesTitle: true,
+      },
       sidebar: [
         {
           label: '新手指南',

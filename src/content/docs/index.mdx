@@ -3,7 +3,9 @@ title: PCHSystem
 description: HTCMC 项目贡献与荣誉系统 · 新手入门指南
 template: splash
 hero:
-  tagline: 在游戏中协作建造，自动追踪你的每一份贡献。
+  tagline: 在游戏中协作建造,自动追踪你的每一份贡献。
+  image:
+    html: '<img src="/PCHSystem-wiki/hero-site.png" alt="PCHSystem 工件流水线:像素方块徽标衔接材料收集、施工建造、归档结算三阶段" width="720" />'
   actions:
     - text: 快速开始
       link: /PCHSystem-wiki/guide/getting-started/
@@ -18,41 +20,42 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import Card from '../../components/Card.astro';
+import { CardGrid } from '@astrojs/starlight/components';
 
 ## 核心功能
 
-<CardGrid stagger>
-	<Card title="🏗️ 项目协作" icon="rocket">
+<CardGrid>
+	<Card title="项目协作" icon="rocket" href="/PCHSystem-wiki/gameplay/project-lifecycle/">
 		认领材料、多人累计上交、交付确认、打回返工——Web 端与游戏端对等操作。
 	</Card>
-	<Card title="📊 施工统计" icon="seti:chart">
-		自动追踪每位参与者的方块放置贡献，多种图表直观展示项目进度。
+	<Card title="施工统计" icon="analytics" href="/PCHSystem-wiki/gameplay/construction/">
+		自动追踪每位参与者的方块放置贡献,多种图表直观展示项目进度。
 	</Card>
-	<Card title="🏆 积分体系" icon="seti:trophy">
-		项目完结后按贡献占比自动结算积分，统一积分入账与排行榜。
+	<Card title="积分体系" icon="database" href="/PCHSystem-wiki/gameplay/scoring/">
+		项目完结后按贡献占比自动结算积分,统一积分入账与排行榜。
 	</Card>
-	<Card title="👑 称号系统" icon="seti:star">
-		积分达标自动解锁称号，聊天前缀差异化，高阶全服公告。
+	<Card title="称号系统" icon="star" href="/PCHSystem-wiki/gameplay/titles/">
+		积分达标自动解锁称号,聊天前缀差异化,高阶全服公告。
 	</Card>
-	<Card title="📦 一键建表" icon="seti:file">
-		上传投影 / 蓝图，自动解析方块、翻译中文名、生成材料清单。
+	<Card title="一键建表" icon="add-document" href="/PCHSystem-wiki/guide/submit-materials/">
+		上传投影 / 蓝图,自动解析方块、翻译中文名、生成材料清单。
 	</Card>
-	<Card title="🔔 消息通知" icon="seti:bell">
-		认领、交付、打回等事件游戏内自动通知，离线通知上线补推。
+	<Card title="消息通知" icon="comment-alt" href="/PCHSystem-wiki/guide/web-dashboard/">
+		认领、交付、打回等事件游戏内自动通知,离线通知上线补推。
 	</Card>
 </CardGrid>
 
 ## 快速导航
 
-<CardGrid stagger>
-	<Card title="第一次来？" icon="seti:question" href="/PCHSystem-wiki/guide/getting-started/">
-		从零开始：加入服务器 → 绑定账号 → 认领材料 → 提交贡献
+<CardGrid>
+	<Card title="第一次来?" icon="question" href="/PCHSystem-wiki/guide/getting-started/">
+		从零开始:加入服务器 → 绑定账号 → 认领材料 → 提交贡献
 	</Card>
-	<Card title="想了解玩法？" icon="seti:book" href="/PCHSystem-wiki/gameplay/project-lifecycle/">
+	<Card title="想了解玩法?" icon="open-book" href="/PCHSystem-wiki/gameplay/project-lifecycle/">
 		项目生命周期、积分规则、称号体系、施工上报
 	</Card>
-	<Card title="想查命令？" icon="seti:terminal" href="/PCHSystem-wiki/commands/quick-reference/">
+	<Card title="想查命令?" icon="list-format" href="/PCHSystem-wiki/commands/quick-reference/">
 		!!PCH 系列命令完整速查表
 	</Card>
 </CardGrid>
