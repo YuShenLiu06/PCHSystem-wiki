@@ -151,6 +151,23 @@ html[data-has-hero] .pagination-links {
   display: none;
 }
 
+/* 桌面端:hero 图片 contained 对齐——右沿对齐 hero 容器,大小匹配 tagline 列 */
+html[data-has-hero] .hero {
+  grid-template-columns: minmax(0, 1fr) auto;
+  justify-content: space-between;
+}
+
+html[data-has-hero] .hero-html {
+  width: auto;
+  max-width: 44rem;
+}
+
+html[data-has-hero] .hero-html img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* 手机端隐藏 hero 图片,避免溢出 */
 @media (max-width: 50rem) {
   html[data-has-hero] .hero-html {
