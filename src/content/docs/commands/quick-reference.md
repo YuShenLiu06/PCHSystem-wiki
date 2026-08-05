@@ -10,16 +10,14 @@ description: PCHSystem 游戏内命令一览表
 | `!!PCH` | 显示帮助菜单 |
 | `!!PCH login` | 获取 Web 后台登录链接 |
 | `!!PCH bind` | 发起账号绑定（获取短码） |
-| `!!PCH bind <code>` | 消费 Web 端短码完成绑定 |
 | `!!PCH status` | 前后端连接自检 |
-| `!!PCH info` | 个人信息：UUID / 绑定状态 / 称号 |
 
 ## 项目命令
 
 | 命令 | 说明 |
 |------|------|
-| `!!PCH project list` | 项目列表 |
-| `!!PCH project info <项目>` | 查看项目详情 |
+| `!!PCH sheet list` | 项目列表 |
+| `!!PCH sheet view <项目>` | 查看项目详情 |
 
 ## 表格快速入口
 
@@ -31,6 +29,8 @@ description: PCHSystem 游戏内命令一览表
 | `!!submit <编号>` | 指定表格提交 |
 
 ## 积分与称号
+
+*暂未实现*
 
 | 命令 | 说明 |
 |------|------|

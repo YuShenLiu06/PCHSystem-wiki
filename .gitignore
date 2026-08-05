@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# auto-generated from remote repo
+src/content/docs/changelog.md

@@ -113,7 +113,7 @@
    ============================================================ */
 
 /* 首屏 pixel-grid 纸纹 + 顶部绿色微光 */
-body[data-has-hero] .content-panel:first-of-type {
+html[data-has-hero] .content-panel:first-of-type {
   background-image:
     radial-gradient(900px 420px at 50% -8%, rgba(74, 222, 128, 0.1), transparent 65%),
     radial-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px);
@@ -125,19 +125,19 @@ body[data-has-hero] .content-panel:first-of-type {
     center 8px;
 }
 
-:root[data-theme='light'] body[data-has-hero] .content-panel:first-of-type {
+:root[data-theme='light'] html[data-has-hero] .content-panel:first-of-type {
   background-image:
     radial-gradient(900px 420px at 50% -8%, rgba(21, 128, 61, 0.08), transparent 65%),
     radial-gradient(rgba(100, 116, 139, 0.12) 1px, transparent 1px);
 }
 
 /* hero 标题:字距收紧 + 绿色方块光标 */
-body[data-has-hero] h1 {
+html[data-has-hero] h1 {
   letter-spacing: -0.03em;
   font-weight: 800;
 }
 
-body[data-has-hero] h1::after {
+html[data-has-hero] h1::after {
   content: '';
   display: inline-block;
   width: 0.22em;
@@ -147,8 +147,15 @@ body[data-has-hero] h1::after {
 }
 
 /* splash 隐藏翻页 footer 噪声 */
-body[data-has-hero] .pagination-links {
+html[data-has-hero] .pagination-links {
   display: none;
+}
+
+/* 手机端隐藏 hero 图片,避免溢出 */
+@media (max-width: 50rem) {
+  html[data-has-hero] .hero-html {
+    display: none !important;
+  }
 }
 
 /* 减少动效偏好尊重 */

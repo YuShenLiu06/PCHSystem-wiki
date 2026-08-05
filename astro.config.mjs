@@ -62,7 +62,10 @@ export default defineConfig({
         },
         {
           label: '关于',
-          items: [{ label: '关于本 Wiki', slug: 'about' }],
+          items: [
+            { label: '更新日志', slug: 'changelog' },
+            { label: '关于本 Wiki', slug: 'about' },
+          ],
         },
       ],
       customCss: ['./src/styles/custom.css'],

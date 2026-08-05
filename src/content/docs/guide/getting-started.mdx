@@ -1,6 +1,6 @@
 ---
-title: 快速开始
 description: 从零开始上手 PCHSystem
+title: 快速开始
 ---
 
 import { Steps } from '@astrojs/starlight/components';
@@ -29,13 +29,17 @@ import { Steps } from '@astrojs/starlight/components';
 
 5. **提交材料**
 
-   收集好材料后，将物品放入箱子，然后输入 `!!PCH sheet submit <项目编号> <x> <y> <z>`（其中 `<x> <y> <z>` 是箱子的坐标）。系统会自动扫描箱子内容并匹配材料清单。
+   收集好材料后，将物品放入背包（可以嵌套潜影盒），然后输入 `!!PCH sheet submit <项目编号>` 或者使用 `!!submit <项目编号|可选>` 如果**不填写编号**则为最近打开的项目。系统会自动扫描背包然后提交。
 
    也可以手持物品直接提交：`!!PCH sheet submit hand <项目编号>`
 
 6. **查看你的贡献**
 
-   再次输入 `!!PCH sheet view <项目编号>`，已交付的材料会标记为 ✓，你的贡献量一目了然。
+   再次输入 `!!PCH sheet view <项目编号>`，已交付的材料会标记为 ✓同时自动的排序到最后，你的贡献量一目了然。
+
+7. **参与施工**
+
+   如果你们服务器使用的默认的上报起，那么使用 [施工指令](/PCHSystem-wiki/commands/construction-commands/) 或者在web端项目右上角处点击加入施工即可
 
 </Steps>
 
