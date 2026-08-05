@@ -19,7 +19,7 @@ import { Steps } from '@astrojs/starlight/components';
 
 绑定账号后，你可以在 Web 端查看项目进度、编辑材料清单，不进游戏也能协作。
 
-详见 [绑定账号](/guide/bind-account/) 页面。
+详见 [绑定账号](/PCHSystem-wiki/guide/bind-account/) 页面。
 
 ### 浏览项目列表
 
@@ -73,6 +73,6 @@ import { Steps } from '@astrojs/starlight/components';
 
 ## 下一步
 
-- [绑定账号](/guide/bind-account/) — 解锁 Web 端操作
-- [认领与提交材料](/guide/submit-materials/) — 详细操作指南
-- [命令速查](/commands/quick-reference/) — 所有命令一览
+- [绑定账号](/PCHSystem-wiki/guide/bind-account/) — 解锁 Web 端操作
+- [认领与提交材料](/PCHSystem-wiki/guide/submit-materials/) — 详细操作指南
+- [命令速查](/PCHSystem-wiki/commands/quick-reference/) — 所有命令一览
