@@ -1,49 +1,53 @@
-# Starlight Starter Kit: Basics
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%"
+       alt="PCHSystem — HTCMC 项目贡献与荣誉系统 · 新手入门指南">
+</p>
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+# PCHSystem Wiki
 
-```
-npm create astro@latest -- --template starlight
-```
+HTCMC 社区服 **PCHSystem** 的新手入门 Wiki，面向玩家介绍系统功能和使用方法。
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 技术栈
 
-## 🚀 Project Structure
+- **框架**: [Astro Starlight](https://starlight.astro.build/)
+- **部署**: GitHub Pages
+- **语言**: 简体中文
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## 本地开发
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+npm install
+npm run dev      # 本地预览 http://localhost:4321
+npm run build    # 构建到 dist/
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## 目录结构
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```
+src/content/docs/
+├── index.mdx              # 首页（落地页）
+├── guide/                 # 新手指南
+│   ├── getting-started.md
+│   ├── bind-account.md
+│   ├── submit-materials.md
+│   └── web-dashboard.md
+├── gameplay/              # 玩法说明
+│   ├── project-lifecycle.md
+│   ├── scoring.md
+│   ├── titles.md
+│   └── construction.md
+├── commands/              # 命令手册
+│   ├── quick-reference.md
+│   ├── sheet-commands.md
+│   └── construction-commands.md
+├── faq.md                 # 常见问题
+└── about.md               # 关于
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## 相关仓库
 
-## 🧞 Commands
+- [PCHSystem](https://github.com/YuShenLiu06/PCHSystem) — 主项目（后端 / 前端 / MCDR 插件）
 
-All commands are run from the root of the project, from a terminal:
+## License
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+MIT

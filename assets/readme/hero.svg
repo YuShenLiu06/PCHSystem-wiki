@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="340" viewBox="0 0 1200 340"
+     role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">PCHSystem — HTCMC 项目贡献与荣誉系统</title>
+  <desc id="heroDesc">PCHSystem 新手入门 Wiki：Minecraft 社区服的项目管理系统，含材料收集、施工追踪、积分结算、称号解锁。</desc>
+
+  <defs>
+    <!-- Minecraft block pixel pattern -->
+    <pattern id="blockGrid" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="none"/>
+      <rect width="8" height="8" fill="#1e293b" opacity="0.3"/>
+      <rect x="8" y="8" width="8" height="8" fill="#1e293b" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" rx="20" fill="#0f172a"/>
+  <rect width="1200" height="340" rx="20" fill="url(#blockGrid)" opacity="0.5"/>
+
+  <!-- Accent line top -->
+  <rect x="56" y="40" width="4" height="56" rx="2" fill="#4ade80"/>
+
+  <!-- Title block (left) -->
+  <g id="title-block" transform="translate(72 38)">
+    <!-- Category -->
+    <text x="0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="15" font-weight="600" fill="#4ade80" letter-spacing="1.5">
+      MINECRAFT 社区服 · 项目管理系统
+    </text>
+    <!-- Project name -->
+    <text x="0" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="48" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">
+      PCHSystem
+    </text>
+    <!-- Description -->
+    <text x="0" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="18" font-weight="400" fill="#94a3b8">
+      项目贡献与荣誉系统 · 新手入门指南
+    </text>
+
+    <!-- Feature tags -->
+    <g transform="translate(0 122)">
+      <rect x="0" y="0" width="86" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="43" y="18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="12" font-weight="600" fill="#4ade80">🏗️ 项目协作</text>
+
+      <rect x="96" y="0" width="74" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="133" y="18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="12" font-weight="600" fill="#fbbf24">🏆 积分体系</text>
+
+      <rect x="180" y="0" width="74" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="217" y="18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="12" font-weight="600" fill="#38bdf8">👑 称号系统</text>
+
+      <rect x="264" y="0" width="86" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="307" y="18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="12" font-weight="600" fill="#c084fc">📊 施工统计</text>
+    </g>
+
+    <!-- Quick start command -->
+    <g transform="translate(0 170)">
+      <rect x="0" y="0" width="280" height="36" rx="8" fill="#020617" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="23" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+            font-size="13" font-weight="400" fill="#64748b">$</text>
+      <text x="28" y="23" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+            font-size="13" font-weight="400" fill="#4ade80">!!PCH bind</text>
+      <text x="112" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="12" font-weight="400" fill="#475569">← 开始使用</text>
+    </g>
+  </g>
+
+  <!-- Project lifecycle flow (right side) -->
+  <g id="lifecycle" transform="translate(720 50)">
+    <!-- Phase 1: Collecting -->
+    <g transform="translate(0 0)">
+      <rect x="0" y="0" width="150" height="64" rx="10" fill="#1e293b" stroke="#4ade80" stroke-width="1.5"/>
+      <!-- Mini block icon -->
+      <rect x="12" y="16" width="32" height="32" rx="4" fill="#4ade80" opacity="0.2"/>
+      <rect x="16" y="20" width="12" height="12" rx="2" fill="#4ade80" opacity="0.6"/>
+      <rect x="28" y="20" width="12" height="12" rx="2" fill="#4ade80" opacity="0.4"/>
+      <rect x="16" y="32" width="12" height="12" rx="2" fill="#4ade80" opacity="0.4"/>
+      <rect x="28" y="32" width="12" height="12" rx="2" fill="#4ade80" opacity="0.6"/>
+      <text x="56" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="15" font-weight="700" fill="#f8fafc">材料收集</text>
+      <text x="56" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="400" fill="#64748b">认领 · 上交 · 交付</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <path d="M 152 32 L 178 32" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
+    <path d="M 174 27 L 180 32 L 174 37" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Phase 2: Constructing -->
+    <g transform="translate(182 0)">
+      <rect x="0" y="0" width="150" height="64" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+      <!-- Mini crane/build icon -->
+      <rect x="12" y="16" width="32" height="32" rx="4" fill="#38bdf8" opacity="0.2"/>
+      <rect x="18" y="30" width="20" height="14" rx="2" fill="#38bdf8" opacity="0.5"/>
+      <rect x="22" y="22" width="12" height="8" rx="2" fill="#38bdf8" opacity="0.7"/>
+      <text x="56" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="15" font-weight="700" fill="#f8fafc">施工建造</text>
+      <text x="56" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="400" fill="#64748b">追踪 · 归因 · 统计</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <path d="M 334 32 L 360 32" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
+    <path d="M 356 27 L 362 32 L 356 37" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Phase 3: Archived -->
+    <g transform="translate(364 0)">
+      <rect x="0" y="0" width="150" height="64" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+      <!-- Trophy icon -->
+      <rect x="12" y="16" width="32" height="32" rx="4" fill="#fbbf24" opacity="0.2"/>
+      <path d="M 20 22 L 20 30 Q 20 36 28 36 Q 36 36 36 30 L 36 22 Z" fill="#fbbf24" opacity="0.7"/>
+      <rect x="26" y="36" width="4" height="4" fill="#fbbf24" opacity="0.7"/>
+      <rect x="22" y="40" width="12" height="3" rx="1" fill="#fbbf24" opacity="0.7"/>
+      <text x="56" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="15" font-weight="700" fill="#f8fafc">归档结算</text>
+      <text x="56" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="400" fill="#64748b">积分 · 排行 · 称号</text>
+    </g>
+
+    <!-- Stats row -->
+    <g transform="translate(0 88)">
+      <text x="0" y="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+            font-size="11" font-weight="500" fill="#475569">// 三端完全分离</text>
+    </g>
+
+    <!-- Architecture pills -->
+    <g transform="translate(0 106)">
+      <rect x="0" y="0" width="80" height="24" rx="6" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+      <text x="40" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+            font-size="11" font-weight="500" fill="#64748b">MCDR</text>
+
+      <rect x="88" y="0" width="80" height="24" rx="6" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+      <text x="128" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+            font-size="11" font-weight="500" fill="#64748b">FastAPI</text>
+
+      <rect x="176" y="0" width="80" height="24" rx="6" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+      <text x="216" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+            font-size="11" font-weight="500" fill="#64748b">Vue 3</text>
+
+      <rect x="264" y="0" width="80" height="24" rx="6" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+      <text x="304" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+            font-size="11" font-weight="500" fill="#64748b">Starlight</text>
+    </g>
+
+    <!-- Wiki badge -->
+    <g transform="translate(0 146)">
+      <rect x="0" y="0" width="120" height="28" rx="14" fill="#4ade80" opacity="0.15" stroke="#4ade80" stroke-width="1"/>
+      <circle cx="14" cy="14" r="4" fill="#4ade80"/>
+      <text x="26" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="12" font-weight="600" fill="#4ade80">新手入门 Wiki</text>
+    </g>
+  </g>
+</svg>
