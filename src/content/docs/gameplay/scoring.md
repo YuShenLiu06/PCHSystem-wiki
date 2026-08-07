@@ -1,6 +1,6 @@
 ---
 title: 积分体系
-description: 黄皮子积分体系——贡献如何转化为积分
+description: 积分体系——贡献如何转化为积分
 ---
 
 :::caution[开发中]

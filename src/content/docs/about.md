@@ -5,7 +5,7 @@ description: 关于 PCHSystem Wiki
 
 ## 关于本站
 
-本站是 **HTCMC PCHSystem** 的玩家入门指南，帮助新玩家快速了解系统功能和使用方法。
+本站是 **PCHSystem** 的使用文档与新手指南，帮助玩家和开发者快速了解系统功能和使用方法。
 
 ## 技术信息
 
