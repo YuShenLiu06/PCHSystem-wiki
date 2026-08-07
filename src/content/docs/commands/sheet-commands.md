@@ -26,20 +26,19 @@ description: 材料清单协作完整命令参考
 | `[认领]` 按钮 | 全员 | 认领 lock 类型行 |
 | `[交付]` 按钮 | 认领者 | 交付确认 |
 | `[解除]` 按钮 | 认领者 | 放弃认领 |
-| `!!PCH sheet submit <编号> <x> <y> <z>` | 全员 | 扫描箱子提交 |
-| `!!PCH sheet submit hand <编号>` | 全员 | 手持物品提交 |
-| `!!PCH sheet deliver <编号> <行号>` | 认领者 | 交付指定行 |
+| `!!PCH sheet submit <编号>` | 全员 | 扫描背包（含嵌套潜影盒）一键提交 |
+| `!!PCH sheet deliver <编号> <行号> <数量>` | 认领者 | 交付指定行（lock 模式设绝对值；progress 模式为增量） |
 
 ## 负责人命令
 
 | 命令 | 权限 | 说明 |
 |------|------|------|
 | `!!PCH sheet add ...` | owner | 添加材料行 |
-| `!!PCH sheet set <编号> <行号>` | owner | 修改行（数量/排序） |
+| `!!PCH sheet set <编号> <行号> <数量> [排序]` | owner | 修改行（数量/排序） |
 | `!!PCH sheet delrow <编号> <行号>` | owner | 删除行 |
-| `!!PCH sheet addsub <编号> <父行> <registry_id> <数量>` | owner | 添加子物品 |
+| `!!PCH sheet addsub <编号> <父行> <单位用量> [lock\|progress] [排序]` | owner | 添加子物品（须先手持子物品，插件读取手持物品的 registry_id） |
 | `!!PCH sheet delsub <编号> <行号>` | owner | 删除子物品 |
-| `!!PCH sheet setsub <编号> <行号> <数量>` | owner | 修改子物品 |
+| `!!PCH sheet setsub <编号> <行号> <单位用量> [lock\|progress] [排序]` | owner | 修改子物品（单位用量为 qty_per_unit，Float） |
 | `!!PCH sheet reject` | owner | 打回返工 |
 | `!!PCH sheet advance <编号>` | owner | 流转项目阶段 |
 | `!!PCH sheet manager <编号> list` | 全员 | 查看协管员 |

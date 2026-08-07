@@ -13,7 +13,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ### Q: 忘记了 Web 后台密码怎么办？
 
-游戏内输入 `!!PCH login`，点击链接直接进入，无需密码。
+如果当前游戏身份已绑定该 Web 账号，游戏内输入 `!!PCH login` 即可点击链接直接进入，无需密码。如果改名/换 ID 后 UUID 变化，需用 `!!PCH bind` 重新绑定到旧账号。
 
 ### Q: 可以在多个设备上同时登录 Web 后台吗？
 
@@ -24,7 +24,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ### Q: 提交时提示"未匹配到材料"？
 
 检查以下几点：
-1. 箱子里的物品是否在材料清单中
+1. 背包里的物品是否在材料清单中
 2. 该材料行是否已被其他人认领（lock 类型）
 3. 物品的 registry-id 是否正确
 
@@ -32,10 +32,11 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 可以。系统支持扫描潜影盒内的物品。
 
-### Q: 手持提交和箱子提交有什么区别？
+### Q: 有哪些提交方式？
 
-- **箱子提交**：扫描整个箱子的所有物品，一次提交多类材料
-- **手持提交**：只提交当前手持的物品，适合补交单件材料
+当前只有**扫背包一键提交**一种方式：`!!PCH sheet submit <编号>` 或快捷别名 `!!submit`，系统会扫描整个背包（含潜影盒内物品）匹配材料行。
+
+如果你手持某种材料想直接在清单中创建一行，使用 `!!PCH sheet addhand <编号> <数量>`——注意这是**建行**，不是提交。
 
 ### Q: 提交后可以撤回吗？
 
@@ -67,7 +68,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ### Q: 项目协管员能做什么？
 
-协管员可以：认领/交付/打回材料行、流转项目阶段，但不能删除项目或管理其他协管员。
+协管员可以：认领/交付/打回材料行、调整进度、改物品 id、删行、添加子物品，但不能删除项目、归档或管理其他协管员。
 
 ## 其他
 
